@@ -1,0 +1,295 @@
+@font-face {
+    font-family: 'Pulsar';
+    src: url("../fonts/Lab Pulsar.otf");
+}
+
+@font-face {
+    font-family: 'AireExterior';
+    src: url("../fonts/AireExterior.ttf");
+}
+
+.mb90 {
+    margin-bottom: 90px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+}
+
+body {
+    background-color: #141C24;
+}
+.main {
+    background-color: #141C24;
+}
+.container {
+    max-width: 1327px;
+    height: 100%;
+    margin: 0 auto;
+    /* border:1px solid palegreen; */
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    height: 124px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #141C24;
+    display: none;
+    z-index: 2;
+}
+
+.header-logo {
+    margin: auto 106px;
+    text-transform: uppercase;
+    font-size: 24px;
+    color: #57D6FF;
+    position: relative;
+    font-family: 'Pulsar';
+    font-weight: 400;
+}
+
+.header-logo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url("../img/logo.svg");
+    top: 0;
+    left: -50px;
+    width: 33px;
+    height: 28px;
+    background-repeat: no-repeat;
+}
+
+.header-links {
+    display: flex;
+    margin: auto 0;
+}
+
+.header-link {
+    display: block;
+    text-decoration: none;
+    color: #FFF;
+    margin-right: 46px;
+    font-size: 16px;
+}
+
+.header-link:hover {
+    border-bottom: 1px solid #00C5FF;
+}
+
+.slider {
+    margin-top: 26px;
+    position: relative;
+    width: 100%;
+    box-shadow:0 0 20px #57D6FF; /* свечение вокруг */
+    height: 777px;
+    background: linear-gradient(360deg, #141C24 0%, rgba(20, 28, 36, 0) 95.65%), #527E8B;
+    background-image: url("../img/e7789c301a676f7fcd7b4d64da5d42fe.jfif");
+    background-image:url("../img/e7789c301a676f7fcd7b4d64da5d42fe.jfif"), radial-gradient(rgba(82, 125, 139, 0.1) 0%, rgb(87, 214, 255, 0.1) 25%);
+    background-repeat:no-repeat;
+    background-size:cover;
+    border-radius:15px;
+    margin-bottom: 140px;
+}
+
+.slider-head{
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider-logo {
+    text-transform: uppercase;
+    font-size: 24px;
+    color: white;
+    font-weight: 400;
+    font-family: 'Pulsar';
+    position: relative;
+    margin-top: 55px;
+    margin-left: 150px;
+    z-index: 1;
+}
+
+.slider-logo::after {
+    content: '';
+    display: block;
+    position: absolute;
+    background-image: url("../img/logo_white.svg");
+    top: -5px;
+    left: -67px;
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 40px;
+}
+
+.menu-button{
+    cursor: pointer;
+    align-items: baseline;
+    margin-top: 45px;
+    margin-right: 45px;
+    z-index: 1;
+}
+
+.menu-button__elem{
+    width: 45px;
+    height: 5px;
+    background-color: #fff;
+    margin-bottom: 8px;
+}
+
+
+
+.slider-img{ 
+    position: absolute;
+    top:0;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.slider-writings {
+    position: absolute;
+    color: #fff;
+    top: 50%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+}
+
+.slider-writings>h3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 3px;
+}
+
+.slider-writings>h1 {
+    font-weight: 400px;
+    font-size: 48px;
+    font-family: 'AireExterior';
+    line-height: 48px;
+    font-style: normal;
+    margin-bottom: 100px;
+}
+
+.slider-writings>input {
+    background-color: #fff;
+    border:none;
+    padding: 19px 89px;
+    background:linear-gradient(-135deg, transparent 15px, #fff 0);
+    transition: all .3s ease-out;
+}
+
+.slider-writings>input:hover {
+    background:linear-gradient(-135deg, transparent 15px, #57D6FF 0);
+    color:#FFF;
+    transform: scale(1.1,1.1);
+}
+
+.how-it-works{
+    display: flex;
+    margin-bottom: 87px;
+}
+
+.hit-img{
+    margin-right: 67px;
+}
+
+.hit-lilheader {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    /* identical to box height, or 29px */   
+    color: #57D6FF;
+    margin-bottom: 17px;
+}
+
+.hit-lilheader>hr {
+    display: inline-block;
+    width: 50px;
+    background-color: #57D6FF;
+    border:none;
+    height: 0.5px;
+    margin-right: 34px;
+}
+
+.hit-header {
+    font-family: 'AireExterior';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 39px;
+    /* identical to box height */
+    color: #FFFFFF;
+    margin-bottom: 60px;
+}
+
+.hit-text {
+    font-weight: 300;
+    font-size: 21.33px;
+    line-height: 150%;
+    /* or 32px */
+    color: #ABABAB;
+    margin-bottom: 27px;
+    width: 480px;
+}
+
+.hit-text ~ hr { /* тильда это значит "элемент следующий за..." */
+    width: 271px;
+    height: 0.5px;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 27px;
+    margin-left: 0;
+}
+
+.hit-download {
+    display: inline-block;
+    color: #00C5FF;
+    text-decoration: none;
+    margin-top: 74px;
+    align-self: center;
+}
+
+.hit-download:hover{
+    border-bottom:1px solid #00C5FF;
+}
+.quickstart {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 154px;
+}
+
+.quickstart-plates {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 234px;
+    margin-right: 234px;
+    margin-bottom: 90px;
+}
+
+.quickstart-plates > hr {
+    transform: rotate(90deg);
+    width: 1px;
+    height: 73px;
+    background-color: #57D6FF;
+    border:none;
+    margin: 0;
+}
+
+.quickstart-plate > img {
+    margin-bottom: 12px;
+}
+
+.quickstart-plate > p {
+    font-weight: 300;
+font-size: 21.33px;
+line-height: 150%;
+/* identical to box height, or 32px */
+
+
+color: #F1F1F1;
+}

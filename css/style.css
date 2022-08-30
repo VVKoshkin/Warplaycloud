@@ -57,6 +57,7 @@
 
 body {
     background-color: #141C24;
+    overflow-x: hidden;
 }
 
 .main {
@@ -270,17 +271,17 @@ body {
     margin-bottom: 100px;
 }
 
-.slider-writings>input {
+.regbutton {
     background-color: #fff;
     border: none;
     padding: 19px 89px;
     /*background: linear-gradient(-135deg, transparent 15px, #fff 0);*/
     clip-path: polygon(0 0, 93% 0, 100% 30%, 100% 100%, 0% 100%);
     /* обрезка по полигону в процентах от размеров кнопки, конечные числа подобраны на глаз чтоб было красиво */
-    transition: all .3s ease-out;
+    transition: all .2s ease-out;
 }
 
-.slider-writings>input:hover {
+.regbutton:hover {
     background: #57D6FF
         /*linear-gradient(-135deg, transparent 15px, #57D6FF 0)*/
     ;
@@ -434,7 +435,6 @@ body {
     display: flex;
     margin-left: 75px;
     margin-bottom: 69px;
-    overflow: hidden;
 }
 
 .on-map {
@@ -446,6 +446,7 @@ body {
     margin: 0 auto;
     background-color: #171717;
     height: 150px;
+    white-space: nowrap;
 }
 
 .footer-logo {
@@ -482,7 +483,7 @@ body {
     color: #ECECEC;
     text-transform: uppercase;
     margin: auto 0;
-    margin-right: 20px;
+    margin-right: 20px;   
 }
 
 .footer-designed {
@@ -495,6 +496,17 @@ body {
     color: #838383;
     margin: auto 0;
     margin-right: 295px;
+    position: relative;
+}
+
+.footer-designed::after{
+    position: absolute;
+    content: '';
+    background-image: url("../img/designer_mark.svg");
+    top: 0;
+    right:-15px;
+    width: 8px;
+    height: 9px;
 }
 
 .footer-elem {
@@ -503,7 +515,8 @@ body {
     line-height: 14px;
     color: #FFFFFF;
     margin: auto 0;
-    margin-right: 51px;
+    margin-right: 50px;
+    text-decoration: none;
 }
 
 .footer-img {
@@ -511,4 +524,8 @@ body {
     margin: auto 0;
     object-fit: contain;
     margin-right: 10px;
+}
+
+.footer-img:last-of-type {
+    margin-right: 0;
 }

@@ -1,0 +1,31 @@
+.dp-container {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 314px;
+    max-width: 660px;
+    text-align: center;
+}
+
+.blockMiddleHeader {
+    position: relative;
+    margin-bottom: 125px;
+    text-align-last: left;
+    margin-left: 71px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.go-back-arrow {
+    position: absolute;
+    display: block;
+    left: -71px;
+}
+
+.os-elem {
+    display: inline-block;
+    margin-left: 60px;
+}
+
+

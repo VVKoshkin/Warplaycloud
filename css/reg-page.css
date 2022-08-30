@@ -1,0 +1,85 @@
+.ml60 {
+    margin-left: 60px;
+}
+
+.ml40 {
+    margin-left: 40px;
+}
+
+.reg-container {
+    max-width: 480px;
+    margin: 0 auto;
+    margin-top: 124px;
+}
+
+.reg-option {
+    font-family: 'AireExterior';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 48px;
+    color: rgba(255, 255, 255, 0.5);
+    display: inline-block;
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+
+.reg-option.active {
+    color: #FFFFFF;
+}
+
+.regform {
+    text-align: center;
+}
+
+.regform-input {
+    display: block;
+    padding-left: 24px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    width: 390px;
+    border-radius: 5px;
+    border: none;
+    margin-left: 35px;
+}
+
+.regbutton {
+    margin-bottom: 55px;
+}
+
+.regform-agreement {
+    display: flex;
+    padding-left: 95px;
+}
+
+.regform-agreement-cb {
+    position: absolute;
+    z-index: 2;
+    width: 24px;
+    height: 24px;
+    /* opacity: 0; */
+}
+
+.regform-agreement-cb+label {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: left;
+    position: relative;
+    color: #FFFFFF;
+}
+
+.regform-agreement-cb+label::before {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    top: 0;
+    left: -37px;
+}
+.regform-agreement-cb+label::before:hover {
+    background-color: #aaa;
+}

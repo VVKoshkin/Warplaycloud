@@ -1,9 +1,17 @@
+* {
+    color: #FFF;
+}
+
 .ml60 {
     margin-left: 60px;
 }
 
 .ml40 {
     margin-left: 40px;
+}
+
+.hidden {
+    display: none;
 }
 
 .reg-container {
@@ -13,6 +21,12 @@
 }
 
 .reg-option {
+    display: flex;
+    margin-bottom: 32px;
+    align-items: center;
+}
+
+.reg-option-head {
     font-family: 'AireExterior';
     font-style: normal;
     font-weight: 400;
@@ -20,19 +34,27 @@
     line-height: 48px;
     color: rgba(255, 255, 255, 0.5);
     display: inline-block;
-    margin-bottom: 32px;
     cursor: pointer;
 }
 
-.reg-option.active {
+.reg-option-head.active {
     color: #FFFFFF;
 }
 
-.regform {
+.form {
     text-align: center;
+    margin-bottom: 48px;
 }
 
-.regform-input {
+.form-cb-and-button-row {
+    display: flex;
+    padding-left: 35px;
+    padding-right: 55px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-input {
     display: block;
     padding-left: 24px;
     padding-top: 25px;
@@ -43,43 +65,235 @@
     margin-left: 35px;
 }
 
-.regbutton {
-    margin-bottom: 55px;
-}
-
-.regform-agreement {
+.form-agreement {
     display: flex;
-    padding-left: 95px;
+    padding-left: 45px;
+    margin-top: 50px;
+    user-select: none;
 }
 
-.regform-agreement-cb {
+.login-options {
+    text-align: center;
+}
+
+.login-options-text {
+    font-family: 'Roboto';
+    font-style: normal;
+    position: relative;
+    font-weight: 200;
+    font-size: 12px;
+    line-height: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #141C24;
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.login-options-text::before {
     position: absolute;
-    z-index: 2;
-    width: 24px;
-    height: 24px;
-    /* opacity: 0; */
+    content: '';
+    top: 50%;
+    right: 100%;
+    width: 117px;
+    height: 1px;
+    background-color: #fff;
 }
 
-.regform-agreement-cb+label {
+.login-options-text::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 100%;
+    width: 117px;
+    height: 1px;
+    background-color: #fff;
+}
+
+.login-options-icons {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+}
+
+.login-option-link {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 13px;
+}
+.login-option-link:first-of-type {
+    margin-left: 0;
+}
+
+.login-option-link::first-line {
+    margin-left: 0;
+}
+
+.login-option-icon {
+    height: 25px;
+    width: 25px;
+}
+
+.newline {
+    margin-left: 0;
+}
+
+.continue-as{
+    height: 50px;
+    width: 100%;
+    background-color: #287ddf;
+    display: flex;
+    margin-bottom: 32px;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    cursor: pointer;
+    margin-left: 35px;
+    width: 390px;
+}
+
+.continue-as-net {
+    width: 25px;
+    height: 25px;
+    border-radius: 2px;
+    margin-left: 15px;
+}
+
+.continue-as-name{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.continue-as-pic {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* псевдочекбокс */
+
+.control {
+    display: block;
+    position: relative;
+    padding-left: 37px;
+    cursor: pointer;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 200;
     font-size: 12px;
     line-height: 14px;
     text-align: left;
-    position: relative;
     color: #FFFFFF;
 }
 
-.regform-agreement-cb+label::before {
+.control input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.control_indicator {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 24px;
+    width: 24px;
+    background: #FFF;
+}
+
+.control:hover input~.control_indicator,
+.control input:hover~.control_indicator {
+    background: #cccccc;
+}
+
+.control input:checked~.control_indicator {
+    background: #00C5FF;
+}
+
+
+.control input:checked:focus~.control_indicator {
+    background: #00C5FF;
+}
+
+.control_indicator:after {
+    box-sizing: unset;
     content: '';
     position: absolute;
-    width: 24px;
-    height: 24px;
-    background-color: #fff;
-    top: 0;
-    left: -37px;
+    display: none;
 }
-.regform-agreement-cb+label::before:hover {
-    background-color: #aaa;
+
+.control input:checked~.control_indicator:after {
+    display: block;
+}
+
+.control-checkbox .control_indicator:after {
+    left: 8px;
+    top: 2px;
+    width: 5px;
+    height: 13px;
+    border: solid #ffffff;
+    border-width: 0 4px 4px 0;
+    transform: rotate(45deg);
+}
+
+.control-checkbox .control_indicator::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4.5rem;
+    height: 4.5rem;
+    margin-left: -1.3rem;
+    margin-top: -1.3rem;
+    background: #2aa1c0;
+    border-radius: 3rem;
+    opacity: 0.6;
+    z-index: 99999;
+    transform: scale(0);
+}
+
+@keyframes s-ripple {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+@keyframes s-ripple-dup {
+    0% {
+        transform: scale(0);
+    }
+
+    30% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(1);
+    }
+}
+
+.control-checkbox input+.control_indicator::before {
+    animation: s-ripple 250ms ease-out;
+}
+
+.control-checkbox input:checked+.control_indicator::before {
+    animation-name: s-ripple-dup;
 }

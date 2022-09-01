@@ -16,23 +16,67 @@
 
 <body>
     <div class="reg-container">
-        <h1 class="reg-option active ml60">Регистрация</h1>
-        <h1 class="reg-option ml40">Вход</h1>
-        <form action="#" class="regform">
-            <input class="regform-input mb15" type="text" placeholder="Почта / Телефон">
-            <input class="regform-input mb30" type="password" placeholder="Пароль">
-            <input type="button" class="regbutton" value="Зарегистрироваться">
-            <div class="regform-agreement">
-                <input type="checkbox" class="regform-agreement-cb" name="" id="agreement-cb">
-                <label for="regform-agreement-cb">Я соглашаюсь со следующими установленными правилами: Политика
-                использования файлов cookie WARPLAY.CLOUD,
-                Пользовательское соглашение WARPLAY.CLOUD, Лицензионное соглашение MY.GAMES с конечным пользователем
-                в отношении Игр,
-                Лицензионное соглашение с конечным Пользователем для WARPLAY.CLOUD Игрового центра, Политика
-                конфиденциальности портала
-                WARPLAY.CLOUD, Политика конфиденциальности WARPLAY.CLOUD для детей</label>
+        <div class="continue-as">
+            <img src="img/socnets/VK.png" alt="VK" class="continue-as-net">
+            <p class="continue-as-name">Продолжить как Влад</p>
+            <img src="img/Download from the Cloud.png" class="continue-as-pic">
+        </div>
+        <div class="reg-option">
+            <a href="/" class="reg-option-link"><img src="img/Arrow.png" alt="go back" class="reg-option-link__img"></a>
+            <h1 data-type="reg" class="reg-option-head active ml60">Регистрация</h1>
+            <h1 data-type="log" class="reg-option-head ml40">Вход</h1>
+        </div>
+        <form action="#" class="form" data-type="log">
+            <input class="form-input mb15" type="text" placeholder="Почта / Телефон">
+            <input class="form-input mb30" type="password" placeholder="Пароль">
+            <div class="form-cb-and-button-row">
+                <div class="control-group">
+                    <label class="control control-checkbox" style="line-height: 24px;">Запомнить
+                        <input type="checkbox" />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+                <input type="button" class="button" value="Войти">
             </div>
         </form>
-
+        <form action="#" class="form" data-type="reg">
+            <input class="form-input mb15" type="text" placeholder="Почта / Телефон">
+            <input class="form-input mb30" type="password" placeholder="Пароль">
+            <input type="button" class="button" value="Зарегистрироваться">
+            <div class="form-agreement">
+                <div class="control-group">
+                    <label class="control control-checkbox">Я соглашаюсь со следующими установленными правилами:
+                        Политика
+                        использования файлов cookie WARPLAY.CLOUD,
+                        Пользовательское соглашение WARPLAY.CLOUD, Лицензионное соглашение MY.GAMES с конечным
+                        пользователем
+                        в отношении Игр,
+                        Лицензионное соглашение с конечным Пользователем для WARPLAY.CLOUD Игрового центра, Политика
+                        конфиденциальности портала
+                        WARPLAY.CLOUD, Политика конфиденциальности WARPLAY.CLOUD для детей
+                        <input type="checkbox" />
+                        <div class="control_indicator"></div>
+                    </label>
+                </div>
+            </div>
+        </form>
+        <div class="login-options">
+            <p class="login-options-text">Войти через</p>
+            <div class="login-options-icons">
+                <a href="#" class="login-option-link"><img src="img/socnets/Mail_ru.png" class="login-option-icon"></a>
+                <a href="#" class="login-option-link"><img src="img/socnets/VK.png" class="login-option-icon"></a>
+                <a href="#" class="login-option-link"><img src="img/socnets/OK.png" class="login-option-icon"></a>
+                <a href="#" class="login-option-link"><img src="img/socnets/Facebook.png" class="login-option-icon"></a>
+                <a href="#" class="login-option-link"><img src="img/socnets/Google.png" class="login-option-icon"></a>
+                <a href="#" class="newline login-option-link"><img src="img/socnets/Twitch.png"
+                        class="login-option-icon"></a>
+                <a href="#" class="login-option-link"><img src="img/socnets/Twitter.png" class="login-option-icon"></a>
+                <a href="#" class="login-option-link"><img src="img/socnets/Apple.png" class="login-option-icon"></a>
+            </div>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/reg-page.js"></script>
 </body>

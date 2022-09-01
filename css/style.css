@@ -271,17 +271,20 @@ body {
     margin-bottom: 100px;
 }
 
-.regbutton {
+.button {
     background-color: #fff;
     border: none;
-    padding: 19px 89px;
+    width: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    /* padding: 20px 89px; */
     /*background: linear-gradient(-135deg, transparent 15px, #fff 0);*/
     clip-path: polygon(0 0, 93% 0, 100% 30%, 100% 100%, 0% 100%);
     /* обрезка по полигону в процентах от размеров кнопки, конечные числа подобраны на глаз чтоб было красиво */
     transition: all .2s ease-out;
 }
 
-.regbutton:hover {
+.button:hover {
     background: #57D6FF
         /*linear-gradient(-135deg, transparent 15px, #57D6FF 0)*/
     ;

@@ -9,7 +9,7 @@
 }
 
 .ma {
-    margin:auto;
+    margin: auto;
 }
 
 .mb5 {
@@ -179,6 +179,21 @@ body {
     border-bottom: 1px solid #00C5FF;
 }
 
+.header-close {
+    color: #FFF;
+    margin: auto;
+    transform: rotate(45deg);
+    font-size: 24px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.header-close:hover {
+    color: #57D6FF;
+    font-size: 36px;
+
+}
+
 .slider {
     margin-top: 26px;
     position: relative;
@@ -186,13 +201,25 @@ body {
     box-shadow: 0 0 20px #57D6FF;
     /* свечение вокруг */
     height: 777px;
-    background: linear-gradient(360deg, #141C24 0%, rgba(20, 28, 36, 0) 95.65%), #527E8B;
-    background-image: url("../img/e7789c301a676f7fcd7b4d64da5d42fe.jfif");
-    background-image: url("../img/e7789c301a676f7fcd7b4d64da5d42fe.jfif"), radial-gradient(rgba(82, 125, 139, 0.1) 0%, rgb(87, 214, 255, 0.1) 25%);
+    background-image: url("../img/slider/1.jfif");
+    border: 2px solid #57D6FF;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 15px;
     margin-bottom: 140px;
+}
+
+.slider-gradient {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, rgba(82, 125, 139, 0.5) 100%),
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    background-color: rgba(0,197,255,0.0);
+    transition: all .5s ease-in;
 }
 
 .slider-head {
@@ -450,6 +477,7 @@ body {
     background-color: #171717;
     height: 150px;
     white-space: nowrap;
+    position: relative;
 }
 
 .footer-logo {
@@ -486,7 +514,7 @@ body {
     color: #ECECEC;
     text-transform: uppercase;
     margin: auto 0;
-    margin-right: 20px;   
+    margin-right: 20px;
 }
 
 .footer-designed {
@@ -502,12 +530,12 @@ body {
     position: relative;
 }
 
-.footer-designed::after{
+.footer-designed::after {
     position: absolute;
     content: '';
     background-image: url("../img/designer_mark.svg");
     top: 0;
-    right:-15px;
+    right: -15px;
     width: 8px;
     height: 9px;
 }
@@ -531,4 +559,25 @@ body {
 
 .footer-img:last-of-type {
     margin-right: 0;
+}
+
+.creator-block {
+    color: #FFF;
+    position: absolute;
+    font-size: 12px;
+    top: 90%;
+    left: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.creator-block__link {
+    text-decoration: none;
+    margin-left: 10px;
+    line-height: 12px;
+}
+
+.creator-block__img {
+    width: 12px;
+    height: 12px;
 }

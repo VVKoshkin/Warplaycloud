@@ -1,0 +1,36 @@
+.conf-container {
+    margin: 0 auto;
+    margin-top: 275px;
+    max-width: 835px;
+}
+
+.conf-head {
+    display: flex;
+    align-items: center;
+    margin-bottom: 65px;
+}
+
+.conf-head__img {
+    margin-left: 50px;
+    margin-right: 45px;
+}
+
+.conf-head__text {
+    font-family: 'AireExterior';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 39px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.conf-desc {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 180%;
+    /* or 29px */
+    color: #ABABAB;
+}

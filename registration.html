@@ -36,13 +36,13 @@
                         <div class="control_indicator"></div>
                     </label>
                 </div>
-                <input type="button" class="button" value="Войти">
+                <input type="submit" class="button" value="Войти">
             </div>
         </form>
         <form action="#" class="form" data-type="reg">
-            <input class="form-input mb15" type="text" placeholder="Почта / Телефон">
-            <input class="form-input mb30" type="password" placeholder="Пароль">
-            <input type="button" class="button" value="Зарегистрироваться">
+            <input class="form-input mb15" name="phone" type="text" placeholder="Почта / Телефон" required>
+            <input class="form-input mb30" type="password" placeholder="Пароль" required>
+            <input type="submit" class="button" value="Зарегистрироваться">
             <div class="form-agreement">
                 <div class="control-group">
                     <label class="control control-checkbox">Я соглашаюсь со следующими установленными правилами:
@@ -54,7 +54,7 @@
                         Лицензионное соглашение с конечным Пользователем для WARPLAY.CLOUD Игрового центра, Политика
                         конфиденциальности портала
                         WARPLAY.CLOUD, Политика конфиденциальности WARPLAY.CLOUD для детей
-                        <input type="checkbox" />
+                        <input type="checkbox" required/>
                         <div class="control_indicator"></div>
                     </label>
                 </div>

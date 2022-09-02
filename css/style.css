@@ -48,6 +48,11 @@
     margin-bottom: 90px;
 }
 
+.mb165 {
+    margin-bottom: 165px;
+}
+
+
 * {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
@@ -60,11 +65,8 @@ body {
     overflow-x: hidden;
 }
 
-.main {
-    background-color: #141C24;
-}
-
 .container {
+    width: auto;
     max-width: 1327px;
     height: 100%;
     margin: 0 auto;
@@ -137,7 +139,7 @@ body {
     margin: 0 auto;
     background-color: #141C24;
     display: none;
-    z-index: 2;
+    z-index: 3;
 }
 
 .header-logo {
@@ -196,22 +198,25 @@ body {
 
 .slider {
     margin-top: 26px;
-    position: relative;
     width: 100%;
-    box-shadow: 0 0 20px #57D6FF;
-    /* свечение вокруг */
-    height: 777px;
-    background-image: url("../img/slider/1.jfif");
-    border: 2px solid #57D6FF;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 15px;
     margin-bottom: 140px;
+    position: relative;
+}
+
+.slider-image {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    border: 2px solid #57D6FF;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #57D6FF;
+    z-index: -1;
+    top: 0;
+    height: 775px;
 }
 
 .slider-gradient {
     position: absolute;
-    z-index: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -219,7 +224,9 @@ body {
     background-image: radial-gradient(49.95% 96.01% at 50.05% 49.91%, rgba(82, 125, 139, 0) 0%, rgba(82, 125, 139, 0.5) 100%),
         linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
     background-color: rgba(0,197,255,0.0);
-    transition: all .5s ease-in;
+    transition: background-color .5s ease-in;
+    border-radius: 15px;
+    z-index: -1;
 }
 
 .slider-head {
@@ -236,7 +243,7 @@ body {
     position: relative;
     margin-top: 55px;
     margin-left: 150px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .slider-logo::after {
@@ -256,7 +263,7 @@ body {
     align-items: baseline;
     margin-top: 45px;
     margin-right: 45px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-button__elem {
@@ -266,19 +273,10 @@ body {
     margin-bottom: 8px;
 }
 
-.slider-img {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    border-radius: 20px;
-}
-
 .slider-writings {
-    position: absolute;
     color: #fff;
-    top: 50%;
-    left: 0%;
     width: 100%;
+    margin-top: 265px;
     text-align: center;
 }
 
@@ -296,6 +294,7 @@ body {
     line-height: 48px;
     font-style: normal;
     margin-bottom: 100px;
+    z-index: 2;
 }
 
 .button {

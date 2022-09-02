@@ -7,8 +7,15 @@ $(() => {
         $('.header').hide();
 
     })
+    setSliderSize();
     setInterval(changePicture, 1000 * sliderChangePicDelaySec);
+    $('window').resize(setSliderSize);
 });
+
+const setSliderSize = () => {
+    $('.slider').height($('.slider-image').height());
+    $('.slider-gradient').height($('.slider-image').height());
+}
 
 const getNextImage = (curNum, sliderElement) => {
     const allImageArr = ['1.jfif', '2.jfif', '3.jfif', '4.jfif']
@@ -25,10 +32,10 @@ const changePicture = () => {
     const nextImageLink = getNextImage(curNum, sliderElem)
     $('.slider-gradient').css('background-color', 'rgba(0,197,255, 0.7)')
     setTimeout(() => {
-        $(sliderElem).css('background-image', `url('${nextImageLink}')`)
+        $(sliderElem).find('.slider-image').attr('src',nextImageLink)
         $('.slider-gradient').css('background-color', 'rgba(0,197,255, 0)')
-
-    },500);
+        setSliderSize();
+    }, 500);
 }
 
 const log = (elem) => {

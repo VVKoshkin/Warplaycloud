@@ -23,7 +23,7 @@ const getNextImage = (curNum, sliderElement) => {
     if (nextNum >= allImageArr.length)
         nextNum = 0;
     $(sliderElement).data('image-num', nextNum);
-    return `../img/slider/${allImageArr[nextNum]}`
+    return `img/slider/${allImageArr[nextNum]}`
 }
 
 const changePicture = () => {

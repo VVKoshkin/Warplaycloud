@@ -124,6 +124,7 @@
     margin-left: 15px;
     margin-bottom: 13px;
 }
+
 .login-option-link:first-of-type {
     margin-left: 0;
 }
@@ -141,7 +142,7 @@
     margin-left: 0;
 }
 
-.continue-as{
+.continue-as {
     height: 50px;
     width: 100%;
     background-color: #287ddf;
@@ -162,7 +163,7 @@
     margin-left: 15px;
 }
 
-.continue-as-name{
+.continue-as-name {
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -296,4 +297,50 @@
 
 .control-checkbox input:checked+.control_indicator::before {
     animation-name: s-ripple-dup;
+}
+
+@media screen and (max-width: 600px) {
+
+    .reg-container {
+        margin: 0 auto;
+        width: calc(100% - 15px);
+    }
+
+    .reg-option {
+        margin-top: 80px;
+        flex-direction: column;
+        align-items: baseline;
+        margin-left: 20px;
+        margin-bottom: 50px;
+    }
+
+    .reg-option-link__img {
+        margin-bottom: 45px;
+    }
+
+    .reg-option-head {
+        margin-left: 0;
+        margin-bottom: 6px;
+    }
+
+    .form-input {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .form-agreement {
+        padding-left: 30px;
+    }
+
+    .form-cb-and-button-row {
+        flex-direction: column-reverse;
+    }
+
+    .button {
+        margin-bottom: 30px;
+    }
+
+    .continue-as {
+        display: none;
+    }
 }

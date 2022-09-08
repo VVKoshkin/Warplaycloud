@@ -7,6 +7,10 @@ $(() => {
         $('.header').hide();
 
     })
+    $('.header-arrow').click(() => {
+        $('.header').hide();
+
+    })
     setSliderSize();
     setInterval(changePicture, 1000 * sliderChangePicDelaySec);
     $('window').resize(setSliderSize);

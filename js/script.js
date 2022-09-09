@@ -17,8 +17,9 @@ $(() => {
 });
 
 const setSliderSize = () => {
-    $('.slider').height($('.slider-image').height());
-    $('.slider-gradient').height($('.slider-image').height());
+    return;
+    //$('.slider').height($('.slider-image').height());
+    //$('.slider-gradient').height($('.slider-image').height());
 }
 
 const getNextImage = (curNum, sliderElement) => {
@@ -34,7 +35,7 @@ const changePicture = () => {
     const sliderElem = ('.slider');
     const curNum = $(sliderElem).data('image-num')
     const nextImageLink = getNextImage(curNum, sliderElem)
-    $('.slider-gradient').css('background-color', 'rgba(0,197,255, 0.7)')
+    $('.slider-gradient').css('background-color', 'rgba(0,197,255, 0.9)')
     setTimeout(() => {
         $(sliderElem).find('.slider-image').attr('src',nextImageLink)
         $('.slider-gradient').css('background-color', 'rgba(0,197,255, 0)')

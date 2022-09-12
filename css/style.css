@@ -266,13 +266,11 @@ body {
     z-index: 2;
 }
 
-.slider-logo::after {
+.slider-logo::before {
     content: '';
-    display: block;
-    position: absolute;
+    margin-right: 25px;
+    display: inline-block;
     background-image: url("../img/logo_white.svg");
-    top: -5px;
-    left: -67px;
     background-repeat: no-repeat;
     width: 50px;
     height: 40px;
@@ -632,7 +630,7 @@ body {
     height: 12px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1024px) {
 
     .main {
         width: 100%;
@@ -642,10 +640,20 @@ body {
         width: 100%;
     }
 
+    .slider {
+        margin-top: 0;
+    }
+    
     .slider-writings {
         text-align: left;
         left: 40px;
         width: auto;
+    }
+
+    .slider-logo {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
     }
 
 
@@ -669,6 +677,7 @@ body {
 
     .anydevice {
         flex-direction: column;
+        margin-bottom: 80px;
     }
 
     .anydevice-img {
